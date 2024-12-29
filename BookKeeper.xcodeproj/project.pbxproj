@@ -14,7 +14,7 @@
 		F28899A82D1ED8AF008CAD5C /* Exceptions for "BookKeeper" folder in "BookKeeper" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Resource/Info.plist,
 			);
 			target = F28899952D1ED8AE008CAD5C /* BookKeeper */;
 		};
