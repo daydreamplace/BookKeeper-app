@@ -11,13 +11,17 @@ class MainTabBarController: UITabBarController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setupTabBar()
     }
-
+    
     // MARK: - Setup
     private func setupTabBar() {
         let searchViewController = SearchViewController()
+        tabBar.backgroundColor = .lightGray
+        tabBar.tintColor = .systemBlue
+        tabBar.unselectedItemTintColor = .white
+        
+        
         searchViewController.tabBarItem = UITabBarItem(
             title: "검색",
             image: UIImage(systemName: "magnifyingglass"),
@@ -35,8 +39,5 @@ class MainTabBarController: UITabBarController {
             UINavigationController(rootViewController: searchViewController),
             UINavigationController(rootViewController: savedViewController)
         ]
-        
-        tabBar.tintColor = .systemBlue
-        tabBar.barTintColor = .white
     }
 }
