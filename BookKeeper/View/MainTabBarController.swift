@@ -16,12 +16,12 @@ class MainTabBarController: UITabBarController {
     
     // MARK: - Setup
     private func setupTabBar() {
-        let searchViewController = SearchViewController()
         tabBar.backgroundColor = .lightGray
         tabBar.tintColor = .systemBlue
         tabBar.unselectedItemTintColor = .white
         
-        
+        let searchViewController = SearchViewController()
+
         searchViewController.tabBarItem = UITabBarItem(
             title: "검색",
             image: UIImage(systemName: "magnifyingglass"),
@@ -29,6 +29,7 @@ class MainTabBarController: UITabBarController {
         )
         
         let savedViewController = SavedViewController()
+        
         savedViewController.tabBarItem = UITabBarItem(
             title: "책장",
             image: UIImage(systemName: "bookmark"),

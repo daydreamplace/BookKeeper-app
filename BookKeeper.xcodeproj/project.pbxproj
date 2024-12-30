@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F2889A232D218489008CAD5C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F2889A222D218489008CAD5C /* .gitignore */; };
+		F2889B522D22AED7008CAD5C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F2889B512D22AED7008CAD5C /* SnapKit */; };
+		F2889B552D22AEEA008CAD5C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F2889B542D22AEEA008CAD5C /* RxSwift */; };
+		F2889B582D22AF80008CAD5C /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = F2889B572D22AF80008CAD5C /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2889B552D22AEEA008CAD5C /* RxSwift in Frameworks */,
+				F2889B522D22AED7008CAD5C /* SnapKit in Frameworks */,
+				F2889B582D22AF80008CAD5C /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +90,9 @@
 			);
 			name = BookKeeper;
 			packageProductDependencies = (
+				F2889B512D22AED7008CAD5C /* SnapKit */,
+				F2889B542D22AEEA008CAD5C /* RxSwift */,
+				F2889B572D22AF80008CAD5C /* Moya */,
 			);
 			productName = BookKeeper;
 			productReference = F28899962D1ED8AE008CAD5C /* BookKeeper.app */;
@@ -113,6 +122,11 @@
 			);
 			mainGroup = F288998D2D1ED8AE008CAD5C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F2889B502D22AED7008CAD5C /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F2889B532D22AEEA008CAD5C /* XCRemoteSwiftPackageReference "RxSwift" */,
+				F2889B562D22AF80008CAD5C /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F28899972D1ED8AE008CAD5C /* Products */;
 			projectDirPath = "";
@@ -340,6 +354,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F2889B502D22AED7008CAD5C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		F2889B532D22AEEA008CAD5C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.8.0;
+			};
+		};
+		F2889B562D22AF80008CAD5C /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F2889B512D22AED7008CAD5C /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2889B502D22AED7008CAD5C /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		F2889B542D22AEEA008CAD5C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2889B532D22AEEA008CAD5C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		F2889B572D22AF80008CAD5C /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2889B562D22AF80008CAD5C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F288998E2D1ED8AE008CAD5C /* Project object */;
 }

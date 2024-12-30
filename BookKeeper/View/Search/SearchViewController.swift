@@ -6,8 +6,16 @@
 //
 
 import UIKit
+import SnapKit
 
 class SearchViewController: UIViewController {
+    private let searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.placeholder = "책 제목을 검색하세요."
+        searchBar.searchBarStyle = .minimal
+        return searchBar
+    }()
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,5 +26,12 @@ class SearchViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = .white
         title = "검색"
+        
+        view.addSubview(searchBar)
+        
+        searchBar.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(8)
+            make.leading.trailing.equalToSuperview().inset(16)
+        }
     }
 }
