@@ -16,7 +16,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F28899A82D1ED8AF008CAD5C /* Exceptions for "BookKeeper" folder in "BookKeeper" target */ = {
+		F2889A9F2D226ED8008CAD5C /* Exceptions for "BookKeeper" folder in "BookKeeper" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Resource/Info.plist,
@@ -29,7 +29,7 @@
 		F28899982D1ED8AE008CAD5C /* BookKeeper */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				F28899A82D1ED8AF008CAD5C /* Exceptions for "BookKeeper" folder in "BookKeeper" target */,
+				F2889A9F2D226ED8008CAD5C /* Exceptions for "BookKeeper" folder in "BookKeeper" target */,
 			);
 			path = BookKeeper;
 			sourceTree = "<group>";
@@ -156,7 +156,6 @@
 				INFOPLIST_FILE = BookKeeper/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -183,7 +182,6 @@
 				INFOPLIST_FILE = BookKeeper/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

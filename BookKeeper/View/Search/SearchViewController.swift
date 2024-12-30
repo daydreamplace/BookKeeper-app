@@ -20,4 +20,3 @@ class SearchViewController: UIViewController {
         title = "검색"
     }
 }
-
