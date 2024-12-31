@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
         let searchBar = UISearchBar()
         searchBar.placeholder = "책 제목을 검색하세요."
         searchBar.searchBarStyle = .minimal
+        searchBar.showsCancelButton = true
         return searchBar
     }()
     
@@ -40,12 +41,18 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-            return true
+        return true
         }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text, !searchText.isEmpty else { return }
         searchBar.resignFirstResponder()
     }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.text = ""
+    }
+    
 }
 
