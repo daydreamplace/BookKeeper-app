@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 class SearchViewController: UIViewController {
+    // MARK: - Properties
     private let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "책 제목을 검색하세요."
@@ -21,13 +22,14 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-
+    
     // MARK: - Setup
     private func setupUI() {
         view.backgroundColor = .white
         title = "검색"
         
         view.addSubview(searchBar)
+        searchBar.delegate = self
         
         searchBar.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(8)
@@ -35,3 +37,15 @@ class SearchViewController: UIViewController {
         }
     }
 }
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+            return true
+        }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text, !searchText.isEmpty else { return }
+        searchBar.resignFirstResponder()
+    }
+}
+
