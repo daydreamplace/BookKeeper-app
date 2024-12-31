@@ -10,13 +10,7 @@ import SnapKit
 
 class SearchViewController: UIViewController {
     // MARK: - Properties
-    private let searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.placeholder = "책 제목을 검색하세요."
-        searchBar.searchBarStyle = .minimal
-        searchBar.showsCancelButton = true
-        return searchBar
-    }()
+    private let searchBarView = SearchBarView()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -29,16 +23,17 @@ class SearchViewController: UIViewController {
         view.backgroundColor = .white
         title = "검색"
         
-        view.addSubview(searchBar)
-        searchBar.delegate = self
+        view.addSubview(searchBarView)
+        searchBarView.delegate = self
         
-        searchBar.snp.makeConstraints { make in
+        searchBarView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(8)
             make.leading.trailing.equalToSuperview().inset(16)
         }
     }
 }
 
+// MARK: - UISearchBarDelegate
 extension SearchViewController: UISearchBarDelegate {
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         return true
